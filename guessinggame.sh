@@ -1,8 +1,11 @@
+#!/usr/bin/env bash
+# File: guessinggame.sh
 
 function guessinggame {
 	echo 'Guess how many files are in the current directory?'
 	read guessing_number
 	number_of_files=$(ls -1 | wc -l) #command substitution
+
 
 	while [[ $guessing_number -ne $number_of_files ]]
 	do
@@ -19,13 +22,14 @@ function guessinggame {
 		echo 'Try again to guess: '
 		read guessing_number
 
-		if [[ $guessing_number -eq $number_of_files ]]
-		then
-			echo 'Congratulations! Your guess was wright'
-		fi
-
 
 	done
+
+	if [[ $guessing_number -eq $number_of_files ]]
+	then
+		echo 'Congratulations! Your guess was wright'
+	fi
+
 
 }
 
