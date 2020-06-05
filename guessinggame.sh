@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 # File: guessinggame.sh
 
 function guessinggame {
